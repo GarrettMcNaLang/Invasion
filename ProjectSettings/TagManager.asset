@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - ground
+  - spawnarea
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ground
+    uniqueID: 1549762207
+    locked: 0
+  - name: tower
+    uniqueID: 3468151369
+    locked: 0
+  - name: UI
+    uniqueID: 148560225
     locked: 0
