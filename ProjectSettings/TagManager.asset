@@ -47,6 +47,9 @@ TagManager:
   - name: tower
     uniqueID: 3468151369
     locked: 0
+  - name: Enemy
+    uniqueID: 1865951051
+    locked: 0
   - name: UI
     uniqueID: 148560225
     locked: 0

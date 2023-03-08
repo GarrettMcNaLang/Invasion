@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WScript : towerScript
 {
-    
 
+    
 
     
  new void Start()
@@ -21,8 +21,14 @@ public class WScript : towerScript
         
     }
 
-    public override void Damage(int dmg)
+    public override void loseHealth()
     {
-        health -= dmg;
+        //Decrease health value
+        health--;
+        
+        
+        //Check if health is zero
+        if (health <= 0)
+            Destroy(gameObject);
     }
 }

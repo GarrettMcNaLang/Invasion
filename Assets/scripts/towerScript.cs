@@ -38,8 +38,21 @@ public class towerScript : MonoBehaviour
 
 
     //The function that tells this unit to receive damage
-    public virtual void Damage(int dmg)
+   public virtual void loseHealth()
     {
-        health -= dmg;
+        //Decrease health value
+        health--;
+        
+        
+        //Check if health is zero
+        if (health <= 0)
+            Destroy(gameObject);
+    }
+
+    
+
+    public virtual void Limit()
+    {
+
     }
 }
