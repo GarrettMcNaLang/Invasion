@@ -7,6 +7,8 @@ public class towerScript : MonoBehaviour
     public int MaxHP;
 
     private int _health;
+
+    
     public int health
     {
         set
@@ -26,6 +28,7 @@ public class towerScript : MonoBehaviour
     //Set the health to its initial, maximum value, at the beginning of the game
     protected void Start()
     {
+
         health = MaxHP;
     }
     //The function called when this unit dies

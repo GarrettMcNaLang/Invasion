@@ -7,11 +7,7 @@ public class EnemySpawn : MonoBehaviour
 
     public static EnemySpawn instance;
 
-    private void Awake()
-    {
-        instance = this;
-        
-    }
+     void Awake() {instance = this; }
 
     //Enemy prefabs
     public static List<GameObject> Prefabs;

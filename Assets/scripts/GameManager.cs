@@ -6,10 +6,14 @@ public class GameManager : MonoBehaviour
 {
 
     public TowerSpawn spawner;
+    
     // Start is called before the first frame update
+    
     void Start()
     {
+        
         StartCoroutine(WaveStartDelay());
+        
     }
 
     // Update is called once per frame
@@ -17,6 +21,9 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    
+    
 
     IEnumerator WaveStartDelay()
     {
