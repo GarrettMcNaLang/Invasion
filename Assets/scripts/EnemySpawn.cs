@@ -10,7 +10,7 @@ public class EnemySpawn : MonoBehaviour
      void Awake() {instance = this; }
 
     //Enemy prefabs
-    public static List<GameObject> Prefabs;
+    public List<GameObject> Prefabs;
 
     //Enemy spawn root points
     public List<Transform> SpawnPoints;

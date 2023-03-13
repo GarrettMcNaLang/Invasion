@@ -5,7 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    public static GameManager instance;
+    void Awake()
+    {
+        instance = this;
+    }
+
     public TowerSpawn spawner;
+    public CastleHealth Health;
     
     // Start is called before the first frame update
     
@@ -13,6 +20,8 @@ public class GameManager : MonoBehaviour
     {
         
         StartCoroutine(WaveStartDelay());
+
+        GetComponent<CastleHealth>().Init();
         
     }
 
