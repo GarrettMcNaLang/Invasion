@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TowerSpawn : MonoBehaviour
 {
-    public SpriteRenderer TestSprite;
+    
     //list of tower prefabs that will instantiate
     public List<GameObject> towerPrefab;
     //Transform of the spawning tower(object root)
@@ -46,21 +46,29 @@ public class TowerSpawn : MonoBehaviour
         //Check if we can spawn in cell(collider)
         if(spawnTileMap.GetColliderType(cellposDefault) == Tile.ColliderType.Sprite)
             {
+
                 //spawn the tower
                 SpawnTower(cellposCenter);
                 //Disable the collider
                 spawnTileMap.SetColliderType(cellposDefault, Tile.ColliderType.None);
+                
+
               
             }
         }
     }
-
+ 
     void SpawnTower(Vector3 position)
     {
         GameObject tower = Instantiate(towerPrefab[spawnID], spawntowerRoots);
         tower.transform.position = position;
 
         DeSelectTower();
+    }
+
+    public void RevertCellState(Vector3Int pos)
+    {
+        spawnTileMap.SetColliderType(pos, Tile.ColliderType.Sprite);
     }
     public void SelectTower(int id)
     {

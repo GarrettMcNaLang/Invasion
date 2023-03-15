@@ -5,13 +5,13 @@ using UnityEngine;
 public class WScript : towerScript
 {
 
-    
 
+   
     
  new void Start()
     {
         MaxHP = 20;
-
+        cost = 1;
         health = MaxHP;
     }
 

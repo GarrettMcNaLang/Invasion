@@ -12,16 +12,19 @@ public class GameManager : MonoBehaviour
     }
 
     public TowerSpawn spawner;
-    public CastleHealth Health;
+    public healthsystem Health;
+    public LimitSystem limit;
+   
     
     // Start is called before the first frame update
     
-    void Start()
+    public void Start()
     {
         
         StartCoroutine(WaveStartDelay());
 
-        GetComponent<CastleHealth>().Init();
+        GetComponent<healthsystem>().Init();
+        GetComponent<LimitSystem>().Init();
         
     }
 

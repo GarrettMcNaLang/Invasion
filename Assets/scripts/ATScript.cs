@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class ATScript : towerScript
 {
-    
-   
+
+
 
     
     // Start is called before the first frame update
  new void Start()
     {
+        cost = 1;
         MaxHP = 15;
 
         health = MaxHP;

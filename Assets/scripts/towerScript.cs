@@ -5,7 +5,8 @@ using UnityEngine;
 public class towerScript : MonoBehaviour
 {
     public int MaxHP;
-
+    public int cost;
+    public Vector3Int cellPosition;
     private int _health;
 
     
@@ -35,6 +36,7 @@ public class towerScript : MonoBehaviour
     //protected = gives access to specific classes while inhibiting access from others
     protected virtual void Die()
     {
+        FindObjectOfType<TowerSpawn>().RevertCellState(cellPosition);
         Destroy(this.gameObject);
     }
 
@@ -45,17 +47,14 @@ public class towerScript : MonoBehaviour
     {
         //Decrease health value
         health--;
-        
-        
+
+
         //Check if health is zero
         if (health <= 0)
-            Destroy(gameObject);
+            Die();
     }
 
     
 
-    public virtual void Limit()
-    {
-
-    }
+    
 }
